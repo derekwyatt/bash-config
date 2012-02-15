@@ -1,8 +1,8 @@
 
 export PATH=.:/usr/local/bin:~/bin:$PATH
-if uname | grep Darwin; then
-  export EDITOR=/usr/local/bin/mvim
-fi
+#if uname | grep Darwin; then
+#  export EDITOR=/usr/local/bin/mvim
+#fi
 
 export JAVA_HOME=/usr/local/jdk
 
@@ -35,14 +35,14 @@ if [ -x /usr/local/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
-function g
-{
-  if uname | grep Darwin; then
-    mvim --remote-silent $@
-  else
-    gvim --remote-silent $@
-  fi
-}
+#function g
+#{
+#  if uname | grep Darwin; then
+#    mvim --remote-silent $@
+#  else
+#    gvim --remote-silent $@
+#  fi
+#}
 
 export DIRSTACK_MAX=15
 DS=()
@@ -254,7 +254,7 @@ function csd
 
 alias cd=cd_
 
-for f in $(ls ~/.bash/*);
+for f in $(ls ~/.bash/source_these/*);
 do
   . $f
 done
