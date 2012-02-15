@@ -5,9 +5,9 @@ alias ra='for f in ~/.bash/*; do . $f; done'
 
 # Code related aliases
 alias gdb="gdb --quiet"
-#if ! uname | grep Darwin; then
-#  alias open=gnome-open
-#fi
+if ! uname | grep -q Darwin; then
+  alias open=gnome-open
+fi
 alias sc=screen
 alias scl="screen -list"
 
