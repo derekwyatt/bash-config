@@ -223,10 +223,10 @@ function ss
 
 function csd
 {
-  typeset num=${1-}
+  typeset num="${1-}"
   typeset removedDirectory
 
-  if [ "${num##+([0-9])}" != "" ]; then
+  if ! echo "${num##+([0-9])}" | grep -q '^[0-9][0-9]*$'; then
     c=0
     re=$num
     num=0
