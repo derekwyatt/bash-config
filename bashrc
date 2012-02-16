@@ -1,4 +1,7 @@
 
+set -o vi
+set -o ignoreeof
+
 export PATH=.:/usr/local/bin:~/bin:$PATH
 if uname | grep -q Darwin; then
   export EDITOR="/usr/local/bin/mvim -f"
@@ -7,8 +10,6 @@ else
 fi
 
 export JAVA_HOME=/usr/local/jdk
-
-set -o vi
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
