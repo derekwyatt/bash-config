@@ -84,6 +84,9 @@ function twtty
   local GREEN="\[\033[0;32m\]"
   local BRIGHT_GREEN="\[\033[1;32m\]"
 
+  if [ "$(hostname)" == "lambda.local" ]; then
+    ((SHLVL=SHLVL+1))
+  fi
   if [ $SHLVL -lt 2 ]; then
     local BASIC_TEXT="$GREEN"
     local BRIGHT_TEXT="$BRIGHT_GREEN"
